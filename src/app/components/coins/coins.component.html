@@ -1,0 +1,28 @@
+<div class="container container">
+    <table class="table  table-striped table-dark">
+        <thead>
+            <tr>
+                <th *ngFor="let title of titles">
+                    {{title}}
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let coin of coins; index as i">
+                <td>
+                    <span>{{i + 1}}</span>
+                </td>
+                <td>
+                    <img [src]="coin.image" [alt]="coin.name" style=" width: 2rem">
+                    <span>{{coin.name}}</span>
+                </td>
+                <td>
+                    <span>{{coin.current_price}}</span>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
